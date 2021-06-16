@@ -1,7 +1,14 @@
-import React from "react";
+import React  from "react";
 
-function MoreButton(props) {
-  return <button onClick={/* Fill me in! */ null}>More sushi!</button>;
+function MoreButton({onButtonClick}) {
+  // const [isToggled, setIsToggled] = useState(false)
+
+  function handleClick() {
+    console.log("clicked!")
+    return onButtonClick(true)
+  }
+
+  return <button onClick={handleClick}>More sushi!</button>;
 }
 
 export default MoreButton;
